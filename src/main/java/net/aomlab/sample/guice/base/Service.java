@@ -17,4 +17,7 @@ public interface Service {
     @Inject
     public String get (String key);
 
+    @Inject
+    public boolean getFlag ();
+
 }

@@ -21,5 +21,7 @@ public class ServiceTest {
         Service service = injector.getInstance(Service.class);
         service.set("key", "value");
         assertEquals("value", service.get("key"));
+
+        System.out.println(service.getFlag());
     }
 }

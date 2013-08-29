@@ -3,6 +3,7 @@ package net.aomlab.sample.guice.base;
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
 import com.google.inject.Singleton;
+import com.google.inject.name.Names;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,5 +17,6 @@ public class ServiceModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(Service.class).to(ServiceImpl.class);
+        bind(Boolean.class).annotatedWith(Names.named("test")).toInstance(true);
     }
 }
